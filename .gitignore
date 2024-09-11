@@ -1,8 +1,9 @@
 # Ignore .vagrant
 .vagrant*
+bootc/
 
 # Ignore subdirectories
-!skopeo-ib/
+!bootc-src/
 !.github/
 
 # Ignore Files
