@@ -1,0 +1,6 @@
+[submodule "ast-cli"]
+	path = ast-cli
+	url = https://github.com/Checkmarx/ast-cli.git
+[submodule "bootc"]
+	path = bootc
+	url = https://github.com/containers/bootc
