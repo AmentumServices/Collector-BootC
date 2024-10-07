@@ -1,4 +1,4 @@
-name: BootC Collector main
+name: BootC Collector
 run-name: ${{ github.actor }} is Collecting 🚀
 on:
   push:
