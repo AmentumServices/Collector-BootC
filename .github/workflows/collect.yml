@@ -35,7 +35,9 @@ jobs:
 
       - name: ${{ vars.REGISTRY }} Login
         run: |
-          skopeo login ${{ vars.REGISTRY }} -u ${{ secrets.REDHAT_USER }} -p ${{ secrets.REDHAT_PASS }}
+          skopeo login '${{ vars.REGISTRY }}' \
+            -u '${{ secrets.REDHAT_USER }}' \
+            -p '${{ secrets.REDHAT_PASS }}'
 
       - name: Run Skopeo Sync
         run: |
