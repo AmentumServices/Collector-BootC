@@ -58,7 +58,7 @@ jobs:
 
       - name: TARchive Skopeo Output
         run: |
-          tar -cv -Ipigz --remove-files \
+          tar -cv -I 'pigz -9 -11' --remove-files \
             -f ${{ vars.COLLECTOR }}-${{ needs.Date.outputs.Date }}.tgz ${{ vars.COLLECTOR }} \
           | tee ${{ vars.COLLECTOR }}-${{ needs.Date.outputs.Date }}.tgz.txt
 
@@ -126,7 +126,7 @@ jobs:
 
       - name: TARchive code base for ${{ vars.COLLECTOR }}
         run: |
-          tar -cvC .. \
+          tar -cv -I 'pigz -9 -11' -C .. \
             -f ${{ vars.COLLECTOR }}-code-${{ needs.Date.outputs.Date }}.tgz $(basename ${{ github.WORKSPACE }}) \
             | tee ${{ vars.COLLECTOR }}-code-${{ needs.Date.outputs.Date }}.tgz.txt
 
