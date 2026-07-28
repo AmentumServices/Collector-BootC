@@ -55,8 +55,8 @@ jobs:
 
       - name: Directory Contents
         run: |
-          echo -e "Directory Contents\n$(ls -lAhS *)"
-          echo -e "\n\nDirectory Size\n$(du -hd1)"
+          echo -e "Directory Contents\n$(ls -1Ssh *)"
+          echo -e "\n\nDirectory Size\n$(du -hd2)"
 
       - name: TARchive Skopeo Output
         run: |
