@@ -5,6 +5,3 @@ registry.redhat.io:
 ghcr.io:
     images-by-tag-regex:
         osbuild/image-builder: latest$
-docker.io:
-    images-by-tag-regex:
-        vmware/vcsim: ^latest$
